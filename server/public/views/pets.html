@@ -1,0 +1,23 @@
+<section id=petsFavCount>
+  <h1>Find a Pet</h1>
+  <p>favorites: {{favoritesCount}}</p>
+</section>
+
+<section id="selectPet">
+
+  <select class="selectedType" ng-model="selectedType" ng-options="type for type in types"></select>
+  <button ng-click="getRandomPet()">get random</button>
+
+</section>
+
+<section id="petDisplay">
+
+  <button ng-click="addFavorite()">add {{animal.name.$t}} to favorites</button>
+  <h2>{{animal.name.$t}}</h2>
+  <p>{{animal.description.$t}}</p>
+
+  <div class="petImage">
+    <img src="{{animal.media.photos.photo[3].$t}}" />
+  </div>
+
+</section>

@@ -1,0 +1,19 @@
+
+<section id="favoritesFavCount">
+  <h1>Your Favorite Pets</h1>
+  <p>favorites: {{favoritesCount}}</p>
+</section>
+
+
+<section id="favPetDisplay">
+
+  <div class="eachPet" ng-repeat="favorite in favorites">
+    <p>{{favorite.type}} ID: {{favorite.petId}}</p>
+    <h4>Name: {{favorite.name}}</h4>
+    <p>{{favorite.description | limitTo: 100}}</p>
+    <img ng-src="{{favorite.image}}" />
+    <button type="button" name="deletePet" ng-click="deletePet(favorite._id)">delete {{favorite.name}}</button>
+  </div>
+
+
+</section>
